@@ -1,0 +1,19 @@
+#datasource
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.99.100:32771/jpasample?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: Password1
+
+#spring_jpa
+#启动时会根据实体类生成数据表，或者更新表结构，不清空数据，开发阶段使用；validate：表结构稳定后使用，可用于正式环境；
+  jpa:
+    hibernate:
+      ddl-auto: update
+#控制台打印sql
+      show-sql: true
+#让控制器输出的json格式更美观
+  jackson:
+    serialization:
+      indent-output: true
